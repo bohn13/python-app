@@ -23,8 +23,15 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - run: echo "Job  was triggered by event: ${{github.event_name}}"
-      - run: echo "${{runner.os}}"
-      - run: echo "Name of the branch ${{github.ref}} and your repository ${{github.repository}}"
-      - run: echo "This jobs status is ${{job.status}}"
+      - name: Log event
+        run: echo "Job was triggered by event ${{ github.event_name }}"
+
+      - name: Log OS
+        run: echo "${{ runner.os }}"
+
+      - name: Log Repo
+        run: echo "Name of the branch ${{ github.ref }} and repository ${{ github.repository }}"
+
+      - name: Log status
+        run: echo "This jobs status is ${{ job.status }}"
     
