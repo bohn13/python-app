@@ -34,4 +34,4 @@ jobs:
 
       - name: Lint with flake8
         run: |
-          flake . --show-source --statistics
+          flake8 . --show-source --statistics
