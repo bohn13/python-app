@@ -22,7 +22,7 @@ kube2py:
 
   image:
     name: kube2py
-    repository: ikulyk404/kube2py
+    repository: bohn13/kube2py
     version: 2.0.0
   resources:
     requests:
